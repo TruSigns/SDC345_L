@@ -26,3 +26,19 @@ CREATE TABLE orders (
     total_amount DECIMAL(10, 2) NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
+
+INSERT INTO products (product_name, product_description, price, quantity)
+VALUES
+('Laptop', 'Basic student laptop', 599.99, 10),
+('Mouse', 'Wireless computer mouse', 19.99, 25),
+('Keyboard', 'USB keyboard', 29.99, 15);
+
+INSERT INTO users (first_name, last_name, email, password, role)
+VALUES
+('Reese', 'Ruffin', 'reese@example.com', 'password123', 'Admin'),
+('John', 'Smith', 'john@example.com', 'password123', 'User');
+
+INSERT INTO orders (user_id, order_date, total_amount)
+VALUES
+(1, '2026-05-19', 619.98),
+(2, '2026-05-20', 29.99);

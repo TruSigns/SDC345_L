@@ -1,5 +1,7 @@
 <?php
-$pageTitle = "Week 1 Project Planning";
+require_once("config/database.php");
+
+$pageTitle = "Week 3 MVC Project";
 ?>
 
 <!DOCTYPE html>
@@ -12,14 +14,14 @@ $pageTitle = "Week 1 Project Planning";
 <body>
 
 <header>
-    <h1>Week 1 Planning: Project Inception & Planning</h1>
+    <h1>Week 3 Development: MVC and Database Objects</h1>
 </header>
 
 <nav>
     <a href="index.php">Home</a>
     <a href="#">Login</a>
     <a href="#">Dashboard</a>
-    <a href="#">Products</a>
+    <a href="view/product_list.php">Products</a>
     <a href="#">Orders</a>
 </nav>
 
@@ -27,26 +29,25 @@ $pageTitle = "Week 1 Project Planning";
     <section>
         <h2>Project Overview</h2>
         <p>
-            The goal of this project is to design and begin development of a PHP web application
-            with a MySQL database backend. During Week 1, the main focus is planning the
-            application structure, organizing development tasks, and designing the database and
-            user interface.
+            This project is a PHP web application that uses a MySQL database.
+            For Week 3, the focus is on using MVC structure and representing
+            database tables with PHP classes and objects.
         </p>
     </section>
 
     <section>
-        <h2>Project Goals</h2>
+        <h2>Week 3 Goals</h2>
         <ul>
-            <li>Design the overall application structure</li>
-            <li>Create the database plan and table structure</li>
-            <li>Plan application pages and navigation</li>
-            <li>Organize project tasks into manageable work items</li>
-            <li>Prepare for development in upcoming weeks</li>
+            <li>Create model classes for database tables</li>
+            <li>Create database classes for CRUD operations</li>
+            <li>Create controller files to connect the model and view</li>
+            <li>Display product data from the database</li>
+            <li>Test database operations through the web application</li>
         </ul>
     </section>
 
     <section>
-        <h2>Week 1 Work Breakdown</h2>
+        <h2>Week 3 Work Breakdown</h2>
 
         <table>
             <tr>
@@ -55,35 +56,57 @@ $pageTitle = "Week 1 Project Planning";
                 <th>Planned Completion</th>
             </tr>
             <tr>
-                <td>Define Project Requirements</td>
-                <td>Review project instructions and identify required features.</td>
-                <td>05/14/2026</td>
+                <td>Create Model Classes</td>
+                <td>Build PHP classes that represent database tables.</td>
+                <td>05/25/2026</td>
             </tr>
             <tr>
-                <td>Design Database Structure</td>
-                <td>Plan database tables, keys, and relationships.</td>
-                <td>05/15/2026</td>
+                <td>Create CRUD Functions</td>
+                <td>Add create, read, update, and delete database operations.</td>
+                <td>05/26/2026</td>
             </tr>
             <tr>
-                <td>Create UI Layout Plan</td>
-                <td>Plan pages, navigation, and basic user interface layout.</td>
-                <td>05/15/2026</td>
+                <td>Build Controller Files</td>
+                <td>Create controller files that connect the model files to the user interface.</td>
+                <td>05/27/2026</td>
             </tr>
             <tr>
-                <td>Setup Development Environment</td>
-                <td>Configure XAMPP, VS Code, PHP files, and project folders.</td>
-                <td>05/16/2026</td>
+                <td>Test Database Operations</td>
+                <td>Test that the application can read product data from the database.</td>
+                <td>05/28/2026</td>
             </tr>
             <tr>
-                <td>Create Initial Project Files</td>
-                <td>Create starter PHP, CSS, and database files.</td>
-                <td>05/17/2026</td>
+                <td>Finish Validation Functions</td>
+                <td>Complete validation logic that was not finished during Week 2.</td>
+                <td>05/24/2026</td>
             </tr>
         </table>
     </section>
 
     <section>
-        <h2>Database Design Plan</h2>
+        <h2>MVC Structure</h2>
+
+        <h3>Model</h3>
+        <p>
+            The model files represent the database data and handle database operations.
+            In this project, the product model represents the products table.
+        </p>
+
+        <h3>View</h3>
+        <p>
+            The view files display information to the user.
+            In this project, the product list page displays products from the database.
+        </p>
+
+        <h3>Controller</h3>
+        <p>
+            The controller connects the model and view.
+            It gets data from the database class and sends it to the page that displays it.
+        </p>
+    </section>
+
+    <section>
+        <h2>Database Tables</h2>
 
         <h3>Users Table</h3>
         <ul>
@@ -114,17 +137,25 @@ $pageTitle = "Week 1 Project Planning";
     </section>
 
     <section>
-        <h2>Week 1 Reflection</h2>
+        <h2>Product Page</h2>
         <p>
-            The planning process helped organize the project into smaller tasks that are easier
-            to manage. The database and page structure became clearer after reviewing the project
-            requirements.
+            Click the button below to view product records from the database using the Week 3 MVC structure.
+        </p>
+
+        <a class="button" href="view/product_list.php">View Products</a>
+    </section>
+
+    <section>
+        <h2>Week 3 Reflection</h2>
+        <p>
+            This week helped me understand how MVC separates the application into cleaner parts.
+            I also learned how PHP classes can represent database tables and make the project easier to organize.
         </p>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2026 Week 1 Project Planning</p>
+    <p>&copy; 2026 Week 3 MVC Project</p>
 </footer>
 
 </body>
