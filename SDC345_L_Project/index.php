@@ -1,7 +1,7 @@
 <?php
 require_once("config/database.php");
 
-$pageTitle = "Week 3 MVC Project";
+$pageTitle = "Week 4 Site Security Project";
 ?>
 
 <!DOCTYPE html>
@@ -14,15 +14,16 @@ $pageTitle = "Week 3 MVC Project";
 <body>
 
 <header>
-    <h1>Week 3 Development: MVC and Database Objects</h1>
+    <h1>Week 4 Development: Site Security</h1>
 </header>
 
 <nav>
     <a href="index.php">Home</a>
-    <a href="#">Login</a>
-    <a href="#">Dashboard</a>
+    <a href="login.php">Login</a>
+    <a href="dashboard.php">Dashboard</a>
     <a href="view/product_list.php">Products</a>
     <a href="#">Orders</a>
+    <a href="logout.php">Logout</a>
 </nav>
 
 <main>
@@ -30,24 +31,24 @@ $pageTitle = "Week 3 MVC Project";
         <h2>Project Overview</h2>
         <p>
             This project is a PHP web application that uses a MySQL database.
-            For Week 3, the focus is on using MVC structure and representing
-            database tables with PHP classes and objects.
+            For Week 4, the focus is on adding site security through authentication,
+            authorization, sessions, and HTTPS awareness.
         </p>
     </section>
 
     <section>
-        <h2>Week 3 Goals</h2>
+        <h2>Week 4 Goals</h2>
         <ul>
-            <li>Create model classes for database tables</li>
-            <li>Create database classes for CRUD operations</li>
-            <li>Create controller files to connect the model and view</li>
-            <li>Display product data from the database</li>
-            <li>Test database operations through the web application</li>
+            <li>Add a login system for authentication</li>
+            <li>Create user roles for authorization</li>
+            <li>Protect pages using PHP sessions</li>
+            <li>Limit access to certain pages based on login status</li>
+            <li>Understand why HTTPS is needed for secure data transfer</li>
         </ul>
     </section>
 
     <section>
-        <h2>Week 3 Work Breakdown</h2>
+        <h2>Week 4 Work Breakdown</h2>
 
         <table>
             <tr>
@@ -56,53 +57,64 @@ $pageTitle = "Week 3 MVC Project";
                 <th>Planned Completion</th>
             </tr>
             <tr>
-                <td>Create Model Classes</td>
-                <td>Build PHP classes that represent database tables.</td>
-                <td>05/25/2026</td>
+                <td>Add Login System</td>
+                <td>Create an authentication system with a login form.</td>
+                <td>06/01/2026</td>
             </tr>
             <tr>
-                <td>Create CRUD Functions</td>
-                <td>Add create, read, update, and delete database operations.</td>
-                <td>05/26/2026</td>
+                <td>Create User Roles</td>
+                <td>Add authorization levels such as Admin and User.</td>
+                <td>06/02/2026</td>
             </tr>
             <tr>
-                <td>Build Controller Files</td>
-                <td>Create controller files that connect the model files to the user interface.</td>
-                <td>05/27/2026</td>
+                <td>Secure Pages</td>
+                <td>Restrict access to protected pages using PHP sessions.</td>
+                <td>06/03/2026</td>
             </tr>
             <tr>
-                <td>Test Database Operations</td>
-                <td>Test that the application can read product data from the database.</td>
-                <td>05/28/2026</td>
+                <td>Enable HTTPS Support</td>
+                <td>Review how HTTPS protects login and user data.</td>
+                <td>06/04/2026</td>
             </tr>
             <tr>
-                <td>Finish Validation Functions</td>
-                <td>Complete validation logic that was not finished during Week 2.</td>
-                <td>05/24/2026</td>
+                <td>Finish Controller Testing</td>
+                <td>Complete remaining controller testing from Week 3.</td>
+                <td>05/31/2026</td>
             </tr>
         </table>
     </section>
 
     <section>
-        <h2>MVC Structure</h2>
+        <h2>Security Concepts</h2>
 
-        <h3>Model</h3>
+        <h3>Authentication</h3>
         <p>
-            The model files represent the database data and handle database operations.
-            In this project, the product model represents the products table.
+            Authentication checks who the user is.
+            In this project, the login form verifies the user by checking their email and password.
         </p>
 
-        <h3>View</h3>
+        <h3>Authorization</h3>
         <p>
-            The view files display information to the user.
-            In this project, the product list page displays products from the database.
+            Authorization checks what the user is allowed to access after logging in.
+            In this project, user roles can be used to control which pages or features a user can use.
         </p>
 
-        <h3>Controller</h3>
+        <h3>HTTPS</h3>
         <p>
-            The controller connects the model and view.
-            It gets data from the database class and sends it to the page that displays it.
+            HTTPS helps protect information sent between the user and the website.
+            This is important for login forms because passwords and user data should not be sent in plain text.
         </p>
+    </section>
+
+    <section>
+        <h2>Protected Pages</h2>
+        <p>
+            The dashboard page is protected using a PHP session check.
+            Users must log in before they can access protected content.
+        </p>
+
+        <a class="button" href="login.php">Go to Login</a>
+        <a class="button" href="dashboard.php">Go to Dashboard</a>
     </section>
 
     <section>
@@ -137,25 +149,16 @@ $pageTitle = "Week 3 MVC Project";
     </section>
 
     <section>
-        <h2>Product Page</h2>
+        <h2>Week 4 Reflection</h2>
         <p>
-            Click the button below to view product records from the database using the Week 3 MVC structure.
-        </p>
-
-        <a class="button" href="view/product_list.php">View Products</a>
-    </section>
-
-    <section>
-        <h2>Week 3 Reflection</h2>
-        <p>
-            This week helped me understand how MVC separates the application into cleaner parts.
-            I also learned how PHP classes can represent database tables and make the project easier to organize.
+            This week helped me understand why security needs to be added before sharing an application with other users.
+            I learned that authentication verifies the user, authorization controls access, and HTTPS helps protect user information.
         </p>
     </section>
 </main>
 
 <footer>
-    <p>&copy; 2026 Week 3 MVC Project</p>
+    <p>&copy; 2026 Week 4 Site Security Project</p>
 </footer>
 
 </body>
