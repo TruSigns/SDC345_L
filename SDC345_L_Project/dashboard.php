@@ -30,6 +30,7 @@ if ($_SESSION["role"] != "Admin") {
 <p>Your role is: <?php echo $_SESSION["role"]; ?></p>
 
 <a href="view/product_list.php">View Products</a>
+<a href="upload.php">Upload File</a>
 
 <br><br>
 

@@ -24,8 +24,12 @@ $pageTitle = "Week 4 Site Security Project";
     <a href="view/product_list.php">Products</a>
     <a href="#">Orders</a>
     <a href="logout.php">Logout</a>
+    <a href="upload.php">File Upload</a>
+    <a href="customers.php">Customers</a>
+    <a href="employees.php">Employees</a>
+    <a href="complaints.php">Complaints</a>
+    <a href="assign_complaint.php">Assign Complaint</a>
 </nav>
-
 <main>
     <section>
         <h2>Project Overview</h2>
